@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'home#index'
+  resources :employees
   #public pages routes
   get 'about-us' => 'pages#about_us'
   get 'contact-us' => 'pages#contact_us'

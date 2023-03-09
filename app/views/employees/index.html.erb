@@ -1,0 +1,24 @@
+<div class= "card mt5 mb-5">
+  <div class = "card-body">
+    <h2 class = "text-centered"> Listing Employees </h1>
+  </div>
+</div>
+<%=link_to "Create Employee",new_employee_path %>
+<table class = "table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+<tbody>
+  <% @employees.each do |employee| %>
+    <tr>
+      <td><%= employee.name%></td>
+      <td><%= employee.personal_email%></td>
+      <td><%= employee.full_address%></td>
+  <% end %>
+</tbody>
+</table>
+   
